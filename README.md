@@ -35,11 +35,11 @@ Ensure Poetry is installed on your machine:
 curl -sSL https://install.python-poetry.org | python3 -
 ```
 
-## 🛠️ Getting started
+## 🚀 Getting started
 
 ### Run poetry install to create your environment.
 ```
-poetry install
+poetry install --no-root
 ```
 
 ### Activate the environment
