@@ -20,3 +20,35 @@ This repository contains practical implementations of quantum algorithms present
 ## 🔧 Framework
 
 Built with [Qiskit](https://qiskit.org) — IBM’s open-source quantum computing SDK.
+
+---
+
+## 🛠️ Project Setup (using Poetry)
+
+This project uses [Poetry](https://python-poetry.org/) for dependency management and packaging.
+
+### Prerequisites
+
+Ensure Poetry is installed on your machine:
+
+```bash
+curl -sSL https://install.python-poetry.org | python3 -
+```
+
+## 🛠️ Getting started
+
+### Run poetry install to create your environment.
+```
+poetry install
+```
+
+### Activate the environment
+```
+poetry shell
+```
+
+### Use poetry run jupyter lab to launch your notebooks inside the managed environment.
+```
+jupyter notebook
+```
+

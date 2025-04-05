@@ -1,0 +1,52 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Poetry files
+poetry.lock
+.cache/
+dist/
+build/
+
+# Virtual environments
+.env/
+.venv/
+venv/
+ENV/
+env/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# VSCode and other IDE configs
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Jupyter runtime, logs, etc.
+*.log
+*.out
+*.err
+.ipython/
+.jupyter/
+.jupyternotebook/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# MyPy / coverage / test outputs
+.mypy_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# matplotlib figures
+figures/
+
+# Ignore compiled notebooks (optional)
+*.nbconvert.ipynb
