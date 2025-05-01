@@ -14,7 +14,7 @@ This repository contains practical implementations of quantum algorithms present
 ## 🧠 Goals
 
 - Help beginners understand the logic behind quantum algorithms  
-- Offer clean and easy-to-follow implementations using Python and Qiskit  
+- Offer clean and easy-to-follow implementations using Python and Qiskit v2.0.0 
 - Serve as a learning companion to the concepts discussed in the paper
 
 ## 🔧 Framework
