@@ -1,20 +1,22 @@
 [tool.poetry]
-name = "quantum-algorithms-in-action"
+name = "qalgo"
 version = "0.1.0"
 description = "Implementations of quantum algorithms from the paper 'Quantum Algorithm Implementations for Beginners'"
 authors = ["Iñaki Ortiz de Landaluce <inaki.ortizdelandaluce@gmail.com>"]
 license = "MIT"
 readme = "README.md"
-packages = [{ include = "qalg" }]
+packages = [{ include = "qalgo" }]
 
 [tool.poetry.dependencies]
 python = ">=3.9,<4.0"
-qiskit = "^1.0.0"
+qiskit = {extras = ["visualization"], version = "^2.0.0"}
 jupyterlab = "^4.0.0"
 matplotlib = "^3.7.0"
 numpy = "^1.23.0"
 scipy = "^1.10.0"
 ipython = "^8.10.0"
+qiskit-ibm-runtime = "^0.37.0"
+qiskit-aer = "^0.17.0"
 
 [tool.poetry.group.dev.dependencies]
 black = "^24.0.0"
@@ -24,3 +26,6 @@ jupyter = "^1.0.0"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.matplotlib]
+backend = "TkAgg"
