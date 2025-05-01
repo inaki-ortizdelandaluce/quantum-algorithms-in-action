@@ -29,7 +29,7 @@ def oracle(oracle_type: OracleType):
     return qc
 
 
-def simulate(oracle_type: OracleType, shots=1024):
+def circuit(oracle_type: OracleType):
 
     # create two-qubit circuit
     qc = QuantumCircuit(2, 1)
@@ -50,6 +50,10 @@ def simulate(oracle_type: OracleType, shots=1024):
     # measure input qubit
     qc.measure(0, 0)
 
+    return qc
+
+
+def simulate(qc: QuantumCircuit, shots=1024):
     # run circuit in Aer simulator
     simulator = AerSimulator()
     job = simulator.run(qc, shots=shots)
@@ -60,15 +64,22 @@ def simulate(oracle_type: OracleType, shots=1024):
 
 if __name__ == "__main__":
     shots = 1024
-    result = simulate(OracleType.CONSTANT_0, shots=shots)
+    qc = circuit(OracleType.CONSTANT_0)
+    result = simulate(qc, shots=shots)
     print(f"Deutsch Algorithm with constant-0 oracle results into "
           f"{'constant' if result.get_counts()['0'] == shots else 'inconclusive'} function")
-    result = simulate(OracleType.CONSTANT_1, shots=shots)
+
+    qc = circuit(OracleType.CONSTANT_1)
+    result = simulate(qc, shots=shots)
     print(f"Deutsch Algorithm with constant-1 oracle results into "
           f"{'constant' if result.get_counts()['0'] == shots else 'inconclusive'} function")
-    result = simulate(OracleType.BALANCED_X, shots=shots)
+
+    qc = circuit(OracleType.BALANCED_X)
+    result = simulate(qc, shots=shots)
     print(f"Deutsch Algorithm with balanced-x oracle results into "
           f"{'balanced' if result.get_counts()['1'] == shots else 'inconclusive'} function")
-    result = simulate(OracleType.BALANCED_NOT_X, shots=shots)
+
+    qc = circuit(OracleType.BALANCED_NOT_X)
+    result = simulate(qc, shots=shots)
     print(f"Deutsch Algorithm with balanced-not-x oracle results into "
           f"{'balanced' if result.get_counts()['1'] == shots else 'inconclusive'} function")
